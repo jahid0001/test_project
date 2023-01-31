@@ -2,6 +2,6 @@
 
 echo "Hello";
 
-echo "good"
+echo "good";
 
 echo "Well";
