@@ -1,7 +1,7 @@
 <?php
 
 
-$n = 12;
+$n = 10;
 
-$result = (10 == $n) ? "Twelve" :  "A Number";
+$result = (10 == $n) ? "Ten" :  "A Number";
 echo $result;
