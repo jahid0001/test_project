@@ -6,58 +6,58 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Assignment of module-5 HTML Basic OOP and Superglobal Variables in PHP</title>
 		
-    <style>
+		<style>
 
-      .container-us100{
-        
-        justify-content: center;
-        display: flex;
-              
-      }
+		.container-us100{
+			
+			justify-content: center;
+			display: flex;
+				
+		}
 
-      .column-1{
-        margin-top: 34px;
-        float: left;
-        background: #fff;
-        padding: 64px;
-        margin-left: 30px;
-        border-radius: 10px;
+		.column-1{
+			margin-top: 34px;
+			float: left;
+			background: #fff;
+			padding: 64px;
+			margin-left: 30px;
+			border-radius: 10px;
 
-      }
-      
-      .box{
+		}
+		
+		.box{
 
-        border-radius: 20px;
-        padding: 17px 20px 17px 10px;
-        box-sizing: inherit;
-        border: 1px solid transparent;
-        width: 275px;
-        color: blue;
-        background: rgba(0, 0, 0, 0.05);
-      }
+			border-radius: 20px;
+			padding: 17px 20px 17px 10px;
+			box-sizing: inherit;
+			border: 1px solid transparent;
+			width: 275px;
+			color: blue;
+			background: rgba(0, 0, 0, 0.05);
+		}
 
-      .btn{
+		.btn{
 
-        padding: 0px 20px;
-        min-width: 85px;
-        height: 38px;
-        background-color: 	#454B1B;
-        border-radius: 25px;
-        font-family: SourceSansPro-SemiBold;
-        font-size: 14px;
-        color: #fff;
-        line-height: 1.2;
-        text-transform: uppercase;
-      }
+			padding: 0px 20px;
+			min-width: 85px;
+			height: 38px;
+			background-color: 	#454B1B;
+			border-radius: 25px;
+			font-family: SourceSansPro-SemiBold;
+			font-size: 14px;
+			color: #fff;
+			line-height: 1.2;
+			text-transform: uppercase;
+		}
 
-      .label1{
+		.label1{
 
-        text-transform: uppercase;
-        justify-content: center;
-        display: flex;
-      }
+			text-transform: uppercase;
+			justify-content: center;
+			display: flex;
+		}
 
-    </style>
+		</style>
 	</head>
 	<body style="background-color: #808080;">
 
