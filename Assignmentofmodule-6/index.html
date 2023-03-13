@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Assignment of module-6</title>
+	
+	<style>
+
+	.container-us100{
+        
+        justify-content: center;
+        display: flex;
+              
+      }
+
+      .row{
+        margin-top: 34px;
+        float: left;
+        background: #fff;
+        padding: 64px;
+        margin-left: 30px;
+        border-radius: 10px;
+
+      }
+      
+      .box{
+
+        border-radius: 20px;
+        padding: 17px 20px 17px 10px;
+        box-sizing: inherit;
+        border: 1px solid transparent;
+        width: 275px;
+        color: blue;
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      .btn{
+
+        padding: 0px 20px;
+        min-width: 85px;
+        height: 38px;
+        background-color: 	#454B1B;
+        border-radius: 25px;
+        font-family: SourceSansPro-SemiBold;
+        font-size: 14px;
+        color: #fff;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+
+      .label1{
+
+        text-transform: uppercase;
+        justify-content: center;
+        display: flex;
+      }
+
+
+	</style>
+</head>
+
+<body style="background-color: #808080;">
+	<div class="container-us100">
+		<div class="row">
+			
+			<h2 class="label1">registration form</h2>
+			<h4  class="label1"><a href="dashboard.php">Go Dashboard</a></h4>
+			<form method="POST" action="dataprocess.php" enctype="multipart/form-data"> <br><br>
+				
+				<input type="text" id="name" name="name" required placeholder=" Name" class="box"> <br><br>
+
+				<input type="email" id="email" name="email" required placeholder=" Email" class="box"><br><br>
+
+				<input type="password" id="password" name="password" required placeholder=" Password" class="box"><br><br>
+
+				<input type="file" id="profile_pic" name="profile_pic" accept="image/*" required class="box"> <br><br>
+
+				<input type="submit" value="Submit"  class="btn">
+			</form>
+			
+		</div>
+	</div>
+</body>
+
+</html>
