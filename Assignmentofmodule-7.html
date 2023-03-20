@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment of module-7</title>
+    
+    <style>
+
+        .container-us100{
+            
+            justify-content: center;
+            display: flex;
+                  
+          }
+    
+          .row{
+            margin-top: 34px;
+            background: #fff;
+            padding: 64px;
+            margin-left: 30px;
+            border-radius: 10px;
+    
+          }
+           
+          .label1{
+    
+            text-transform: uppercase;
+            justify-content: center;
+            display: flex;
+          }
+
+        span {
+            color: rgb(10, 163, 112);
+            font-weight: 900;
+            font-size: large;
+            }
+
+        p{
+            font-size: 15px;
+            }
+
+        h5{
+
+            font-size: 14px;
+            }
+    
+    
+        </style>
+</head>
+
+<body style="background-color: #808080;">
+
+    <div class="container-us100">
+
+        <div class="row">
+
+                <h2 class="label1">SQL Commands Assignment</h2>
+
+                <h3 class="label1">company named "XYZ Corp."</h3>
+                
+
+                <h3 class="label1"> [employees table]</h3>
+
+            </code>
+                </pre>
+
+                    <code>
+                            <p> <h5>a. Write a query to select all columns and rows from the employees table: </h5> 
+                                <h5> <span>Answer: </span> SELECT * FROM employees;</h5>
+                                <p> <span>Explanation: </span> This command retrieves all columns and rows from the employees table, returning a result set of all employees' information.</p>
+                            </p>
+                    </code>
+                    <code>
+                            <p> <h5>b. Write a query to select only the name and salary columns of all employees with a salary greater than 50000:</h5>  
+                                <h5><span>Answer: </span> SELECT name, salary FROM employees WHERE salary > 50000;</h5>
+                                <p> <span>Explanation: </span> This command retrieves only the name and salary columns of all employees whose salary is greater than 50000 from the employees table.</p>
+                            </p>
+                    </code>
+
+                    <code>
+                            <p><h5>c. Write a query to calculate the average salary of all employees: </h5>
+                                <h5><span>Answer: </span> SELECT AVG(salary) FROM employees;</h5>
+                                <p> <span>Explanation: </span> This command calculates the average salary of all employees from the employees table and returns a single value result.</p>
+                            </p>
+                    </code>
+                    <code>
+                            <p> <h5>d. Write a query to count the number of employees who work in the "Marketing" department: </h5> 
+                                <h5><span>Answer: </span> SELECT COUNT(*) FROM employees WHERE department_id = (SELECT id FROM departments WHERE name = 'Marketing');
+                                </h5>
+                                <p> <span>Explanation: </span> This command retrieves the id of the "Marketing" department from the departments table and uses it to count the number of employees who work in that department from the employees table.</p>
+                            </p>
+                    </code>
+                    <code>
+                            <p> <h5>e. Write a query to update the salary column of the employee with an id of 1001 to 60000: </h5> 
+                                <h5><span>Answer: </span> UPDATE employees SET salary = 60000 WHERE id = 1001;</h5>
+                                <p> <span>Explanation: </span> This command updates the salary column of the employee with an id of 1001 to 60000 in the employees table.</p>
+                            </p>
+                    </code>
+                    <code>
+                            <p> <h5>f. Write a query to delete all employees whose salary is less than 30000 : </h5> 
+                                <h5><span>Answer: </span> DELETE FROM employees WHERE salary < 30000; </h5>
+                                <p> <span>Explanation: </span> This command deletes all employees whose salary is less than 30000 from the employees table.</p>
+                            </p>
+                    </code>
+
+                    <h3 class="label1"> [departments table]</h3>
+
+
+                    <code>
+                            <p> <h5>a. Write a query to select all columns and rows from the departments table: </h5> 
+                                <h5><span>Answer: </span> SELECT * FROM departments;</h5>
+                                <p> <span>Explanation: </span> This command retrieves all columns and rows from the departments table, returning a result set of all departments' information.</p>
+                            </p>
+                    </code>
+                    <code>
+                            <p> <h5>b. Write a query to select only the name and manager columns of the "Finance" department: </h5> 
+                                <h5><span>Answer: </span> SELECT name, manager FROM departments WHERE name = 'Finance';</h5>
+                                <p> <span>Explanation: </span> This command retrieves only the name and manager columns of the "Finance" department from the departments table.</p>
+                            </p>
+                    </code>
+                    <code>
+                            <p> <h5>c. Write a query to calculate the total number of employees in each department: </h5> 
+                                <h5><span>Answer: </span>SELECT departments.name, COUNT(*) FROM employees JOIN departments ON employees.department_id = departments.id GROUP BY departments.name;</h5>
+                                <p> <span>Explanation: </span> This command joins the employees and departments tables on the department_id and id columns, respectively, and calculates the total number of employees in each department by grouping them by the department name.</p>
+                            </p>
+                    </code>
+                    <code>
+                            <p> <h5>d. Write a query to insert a new department called "Research" with a manager named "John Doe": </h5> 
+                                <h5><span>Answer: </span>INSERT INTO departments (name, manager) VALUES ('Research', 'John Doe');</h5>
+                                <p> <span>Explanation: </span> This command inserts a new row into the departments table with the name "Research" and the manager "John Doe".</p>
+                            </p>
+                    </code>
+
+                </pre>
+
+            </code>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
