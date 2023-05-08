@@ -1,0 +1,10 @@
+
+ Assignment of module-12
+ Assignment name: BMI Calculator
+ Programming language: HTML, CSS & JavaScript 
+ Deploy: Netlify
+
+ live link: https://bmi-calculator-jahid.netlify.app/
+
+
+
