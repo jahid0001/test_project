@@ -27,7 +27,7 @@
 
 **Part 2: Laravel Folder Structure**
 
-* app:- Contains the core code of your application, including the models, controllers, and views.
+* app:- Contains the core code of application, including the models, controllers, and views.
 
 
 * bootstrap:- Contains the files necessary to bootstrap the application and configure the environment.
@@ -70,10 +70,8 @@ _**Here are the steps I took to complete the Laravel Installation and Folder Str
 * Reviewed the purpose of each of the folders in a Laravel project, which are app, bootstrap, config, database, public, resources, routes, storage, tests, and vendor.
 
 
-* Took a screenshot of the running development server to include in the submission.
-
-
 * Created a new route in the routes/web.php file that displays a simple "Hello, World!" message.
+
 
 ![image info](/Assignmentofmodule-13/public/images/hello.png)
 
