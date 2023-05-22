@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment of module-14</title>
+    
+    <style>
+
+        .container-us100{
+            
+            justify-content: center;
+            display: flex;
+                  
+          }
+    
+          .row{
+            margin-top: 34px;
+            background: #fff;
+            padding: 64px;
+            margin-left: 30px;
+            border-radius: 10px;
+    
+          }
+           
+          .label1{
+    
+            text-transform: uppercase;
+            justify-content: center;
+            display: flex;
+          }
+
+        span {
+            color: rgb(10, 163, 112);
+            font-weight: 900;
+            font-size: large;
+            }
+
+        p{
+            font-size: 15px;
+            }
+
+        h5{
+
+            font-size: 14px;
+            }
+    
+    
+        </style>
+</head>
+
+<body style="background-color: #808080;">
+
+    <div class="container-us100">
+
+        <div class="row">
+
+                <h2 class="label1">Assignment of module-14</h2>
+
+              
+
+            </code>
+                </pre>
+
+                    <code>
+                            <p> <h2>Question 1:</h2>
+                                
+                                <h5>You have a Laravel application with a form that submits user information using a POST request. Write the code to retrieve the 'name' input field value from the request and store it in a variable called $name. </h5> 
+                                <h5> <span>Answer: </span> </br>
+                                    use Illuminate\Http\Request; </br>
+                                    
+                                    public function store(Request $request)
+                                    {
+                                        $name = $request->input('name');
+                                        
+                                      
+                                    }
+                                    </h5>
+                                
+                            </p>
+                    </code>
+                    <code>
+                        <p> <h2>Question 2:</h2>
+                            
+                            <h5>In your Laravel application, you want to retrieve the value of the 'User-Agent' header from the current request. Write the code to accomplish this and store the value in a variable called $userAgent. </h5> 
+                            <h5> <span>Answer: </span> </br>
+                                use Illuminate\Http\Request; </br>
+
+                                public function retrieveUserAgent(Request $request)
+                                {
+                                    $userAgent = $request->header('User-Agent');
+
+                                    
+                                }                               
+                                </h5>
+                            
+                        </p>
+                    </code>
+
+                    <code>
+                        <p> <h2>Question 3:</h2>
+                        
+                            <h5>You are building an API endpoint in Laravel that accepts a GET request with a 'page' query parameter. Write the code to retrieve the value of the 'page' parameter from the current request and store it in a variable called $page. If the parameter is not present, set $page to null. </h5> 
+                            <h5> <span>Answer: </span> </br>
+                                use Illuminate\Http\Request; </br>
+
+                               
+
+                                public function handleRequest(Request $request)
+                                {
+                                    $page = $request->query('page');
+
+                                    // If 'page' parameter is not present, set $page to null
+                                    if ($page === null) {
+                                        $page = null;
+                                    }
+
+                                }
+
+                                                        
+                            </h5>
+                        
+                        </p>
+                    </code>
+
+                    <code>
+                        <p> <h2>Question 4:</h2>
+                        
+                            <h5>Create a JSON response in Laravel with the following data: </h5> 
+                            <h5> <span>Answer: </span> </br>
+
+                                use Illuminate\Http\Response; </br>
+
+                                public function jsonResponse()
+                                {
+                                    $data = [
+                                        'name' => 'John Doe',
+                                        'age' => 25,
+                                    ];
+
+                                    $response = [
+                                        'message' => 'Success',
+                                        'data' => $data,
+                                    ];
+
+                                    return response()->json($response, Response::HTTP_OK);
+                                }
+               
+                            </h5>
+                        
+                        </p>
+                    </code>
+
+                    <code>
+                        <p> <h2>Question 5:</h2>
+                        
+                            <h5>You are implementing a file upload feature in your Laravel application. Write the code to handle a file upload named 'avatar' in the current request and store the uploaded file in the 'public/uploads' directory. Use the original filename for the uploaded file. </h5> 
+                            <h5> <span>Answer: </span> </br>
+
+                                use Illuminate\Http\Request;</br>
+                                use Illuminate\Support\Facades\Storage;</br>
+
+                                public function handleFileUpload(Request $request)
+                                {
+                                    if ($request->hasFile('avatar') && $request->file('avatar')->isValid()) {
+                                        $file = $request->file('avatar');
+                                        $originalFilename = $file->getClientOriginalName();
+
+                                        $filePath = $file->storeAs('uploads', $originalFilename, 'public');
+
+                                        // Rest of your code...
+
+                                        return 'File uploaded successfully!';
+                                    }
+
+                                    return 'No valid file uploaded.';
+                                }
+               
+                            </h5>
+                        
+                        </p>
+                    </code>
+
+                    <code>
+                        <p> <h2>Question 6:</h2>
+                        
+                            <h5>Retrieve the value of the 'remember_token' cookie from the current request in Laravel and store it in a variable called $rememberToken. If the cookie is not present, set $rememberToken to null. </h5> 
+                            <h5> <span>Answer: </span> </br>
+
+                                use Illuminate\Http\Request;</br>
+
+                              
+
+                                public function retrieveRememberToken(Request $request)
+                                {
+                                    $rememberToken = $request->cookie('remember_token');
+
+                                    // If 'remember_token' cookie is not present, set $rememberToken to null
+                                    if ($rememberToken === null) {
+                                        $rememberToken = null;
+                                    }
+
+                                    
+                                }
+
+
+                               
+                            </h5>
+                        
+                        </p>
+                    </code>
+
+                    <code>
+                        <p> <h2>Question 7:</h2>
+                        
+                            <h5>Create a route in Laravel that handles a POST request to the '/submit' URL. Inside the route closure, retrieve the 'email' input parameter from the request and store it in a variable called $email. Return a JSON response with the following data: </h5> 
+                            <h5> <span>Answer: </span> </br>
+
+                                use Illuminate\Http\Request;</br>
+                                use Illuminate\Support\Facades\Route;</br>
+
+                                Route::post('/submit', function (Request $request) {
+                                    $email = $request->input('email');
+
+                                    // Perform any necessary actions with $email
+                                    
+                                    $response = [
+                                        'success' => true,
+                                        'message' => 'Form submitted successfully.',
+                                    ];
+
+                                    return response()->json($response);
+                                });
+                            </h5>
+                        
+                        </p>
+                    </code>
+                    
+                    
+
+                </pre>
+
+            </code>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
