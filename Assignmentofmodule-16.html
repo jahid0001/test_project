@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment of module-16</title>
+    
+    <style>
+
+        .container-us100{
+            
+            justify-content: center;
+            display: flex;
+                  
+          }
+    
+          .row{
+            margin-top: 34px;
+            background: #fff;
+            padding: 64px;
+            margin-left: 30px;
+            border-radius: 10px;
+    
+          }
+           
+          .label1{
+    
+            text-transform: uppercase;
+            justify-content: center;
+            display: flex;
+          }
+
+        span {
+            color: rgb(10, 163, 112);
+            font-weight: 900;
+            font-size: large;
+            }
+
+        p{
+            font-size: 15px;
+            }
+
+        h5{
+
+            font-size: 14px;
+            }
+    
+    
+        </style>
+</head>
+
+<body style="background-color: #808080;">
+
+    <div class="container-us100">
+
+        <div class="row">
+
+                <h2 class="label1">Assignment of module-16</h2> 
+                <h2 class="label1">Laravel Migration Concepts</h2>
+
+              
+
+            </code>
+                </pre>
+
+                    <code>
+                            <p> <h2>Task 1: </h2>
+                                
+                                <h5>Create a new Laravel project named "MigrationAssignment" using the Laravel command-line interface. </h5> 
+                                <h5> <span>Answer: </span> </br>
+                                    laravel new MigrationAssignment
+
+                                  
+                                </h5>
+                                
+                            </p>
+                    </code>
+                    <code>
+                        <p> <h2>Task 2:</h2>
+                            
+                            <h5>Within the project, create a new migration file named "create_products_table" that will be responsible for 
+                                creating a table called "products" in the database. 
+                                The "products" table should have the following columns:</h5> 
+                            <h5> <span>Answer: </span> </br>
+                                Using php artisan command:-   php artisan make:migration create_products_table --create=products </br></br>
+                                
+                               
+                                        use Illuminate\Database\Migrations\Migration;</br>
+                                        use Illuminate\Database\Schema\Blueprint;</br>
+                                        use Illuminate\Support\Facades\Schema;</br>
+
+                                        class CreateProductsTable extends Migration</br>
+                                        {
+                                            /**
+                                            * Run the migrations.
+                                            *
+                                            * @return void
+                                            */
+                                            public function up()
+                                            {
+                                                Schema::create('products', function (Blueprint $table) {
+                                                    $table->id();
+                                                    $table->string('name');
+                                                    $table->decimal('price', 8, 2);
+                                                    $table->text('description');
+                                                    $table->timestamps();
+                                                });
+                                            }
+
+                                            /**
+                                            * Reverse the migrations.
+                                            *
+                                            * @return void
+                                            */
+                                            public function down()
+                                            {
+                                                Schema::dropIfExists('products');
+                                            }
+                                        }
+
+
+                                </h5>
+                            
+                        </p>
+                    </code>
+
+                    <code>
+                        <p> <h2>Task 3:</h2>
+                        
+                            <h5>After creating the migration file, run the migration to create the "products" table in the database. </h5> 
+                            <h5> <span>Answer: </span> </br>
+                                
+                                Using php artisan command:-  php artisan migrate
+
+                                                        
+                            </h5>
+                        
+                        </p>
+                    </code>
+
+                    <code>
+                        <p> <h2>Task 4:</h2>
+                        
+                            <h5>Modify the existing migration file "create_products_table" to add a new column called "quantity" to the "products" table. The "quantity" column should be an integer column and allow null values.</h5> 
+                            <h5> <span>Answer: </span> </br>
+
+
+                                Using php artisan command:-   php artisan migrate:edit create_products_table </br></br>
+
+
+                                $table->integer('quantity')->nullable(); </br>
+
+
+                                public function up()</br>
+                                {
+                                    Schema::create('products', function (Blueprint $table) {
+                                        $table->id();
+                                        $table->string('name');
+                                        $table->decimal('price', 8, 2);
+                                        $table->text('description');
+                                        $table->integer('quantity')->nullable();
+                                        $table->timestamps();
+                                    });
+                                }
+
+
+                                
+                            </h5>
+                        
+                        </p>
+                    </code>
+
+                    <code>
+                        <p> <h2>Task 5:</h2>
+                        
+                            <h5>Create a new migration file named "add_category_to_products_table" that will be responsible for adding a new column called "category" to the "products" table. The "category" column should be a string column with a maximum length of 50 characters. </h5> 
+                            <h5> <span>Answer: </span> </br>
+
+                                Using php artisan command:-    php artisan make:migration add_category_to_products_table --table=products </br></br>
+
+
+                        
+
+                                use Illuminate\Database\Migrations\Migration;</br>
+                                use Illuminate\Database\Schema\Blueprint;</br>
+                                use Illuminate\Support\Facades\Schema;</br>
+                                
+                                class AddCategoryToProductsTable extends Migration</br>
+                                {
+                                    /**
+                                     * Run the migrations.
+                                     *
+                                     * @return void
+                                     */
+                                    public function up()
+                                    {
+                                        Schema::table('products', function (Blueprint $table) {
+                                            $table->string('category', 50)->nullable();
+                                        });
+                                    }
+                                
+                                    /**
+                                     * Reverse the migrations.
+                                     *
+                                     * @return void
+                                     */
+                                    public function down()
+                                    {
+                                        Schema::table('products', function (Blueprint $table) {
+                                            $table->dropColumn('category');
+                                        });
+                                    }
+                                }
+                                
+
+                                
+                            </h5>
+                        
+                        </p>
+                    </code>
+
+                    <code>
+                        <p> <h2>Task 6:</h2>
+                        
+                            <h5>After creating the new migration file, run the migration to add the "category" column to the "products" table. </h5> 
+                            <h5> <span>Answer: </span> </br>
+
+
+
+                                Using php artisan command:-  php artisan migrate
+
+                            
+                                       
+
+
+                               
+                            </h5>
+                        
+                        </p>
+                    </code>
+
+                    <code>
+                        <p> <h2>Task 7:</h2>
+                        
+                            <h5>Create a new migration file named "create_orders_table" that will be responsible for creating a table called "orders" in the database. The "orders" table should have the following columns: </h5> 
+                            <h5> <span>Answer: </span> </br>
+
+
+                                Using php artisan command:-     php artisan make:migration create_orders_table </br></br>
+
+
+                            
+
+                                use Illuminate\Database\Migrations\Migration;</br>
+                                use Illuminate\Database\Schema\Blueprint;</br>
+                                use Illuminate\Support\Facades\Schema;</br>
+                                
+                                class CreateOrdersTable extends Migration</br>
+                                {
+                                    /**
+                                     * Run the migrations.
+                                     *
+                                     * @return void
+                                     */
+                                    public function up()
+                                    {
+                                        Schema::create('orders', function (Blueprint $table) {
+                                            $table->id();
+                                            $table->unsignedBigInteger('product_id');
+                                            $table->integer('quantity');
+                                            $table->timestamps();
+                                
+                                            $table->foreign('product_id')->references('id')->on('products');
+                                        });
+                                    }
+                                
+                                    /**
+                                     * Reverse the migrations.
+                                     *
+                                     * @return void
+                                     */
+                                    public function down()
+                                    {
+                                        Schema::dropIfExists('orders');
+                                    }
+                                }
+                                
+                                
+                            </h5>
+                        
+                        </p>
+                    </code>
+                    
+
+                    <code>
+                        <p> <h2>Task 8:</h2>
+                            
+                            <h5>After creating the migration file for the "orders" table, run the migration to create the "orders" table in the database.</h5> 
+                            <h5> <span>Answer: </span> </br>
+                                
+                                Using php artisan command:-  php artisan migrate
+
+
+                                                        
+                            </h5>
+                            
+                        </p>
+                    </code>
+                    
+                    
+
+                </pre>
+
+            </code>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
