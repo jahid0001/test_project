@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment of module-21</title>
+    
+    <style>
+
+        .container-us100{
+            
+            justify-content: center;
+            display: flex;
+                  
+          }
+    
+          .row{
+            margin-top: 34px;
+            background: #fff;
+            padding: 64px;
+            margin-left: 30px;
+            border-radius: 10px;
+    
+          }
+           
+          .label1{
+    
+            text-transform: uppercase;
+            justify-content: center;
+            display: flex;
+          }
+
+        span {
+            color: rgb(10, 163, 112);
+            font-weight: 900;
+            font-size: large;
+            }
+
+        p{
+            font-size: 15px;
+            }
+
+        h5{
+
+            font-size: 14px;
+            }
+    
+    
+        </style>
+</head>
+
+<body style="background-color: #808080;">
+
+    <div class="container-us100">
+
+        <div class="row">
+
+                <h2 class="label1">Assignment of module-21</h2> 
+                
+
+              
+
+            </code>
+                </pre>
+
+                
+
+                    <code>
+                        <p> <h2>Task 1:</h2>
+                            
+                            <h5>Create a multi-user todo backend API using Laravel, implementing a JWT token-based authentication system. The API will allow users to create, read, update, and delete their todo items securely using JWT for authentication.</h5> 
+                            <h5> <span>Answer: </span> </br></br>
+                                
+                              
+
+                              Route::group(['prefix' => 'auth'], function () {
+                                Route::post('login', 'API\UserController@login');</br>
+                                Route::post('register', 'API\UserController@register');</br>
+                            });</br></br>
+                            
+                            Route::group(['middleware' => 'auth:api'], function () {
+                                Route::get('logout', 'API\UserController@logout');</br>
+                                Route::get('user', 'API\UserController@user');</br>
+                            
+                                Route::resource('todos', 'API\TodoController');</br>
+                            });</br></br>
+
+                            </h5>
+                            
+                        </p>
+                    </code>
+
+                    
+                    
+                    
+                    
+
+                </pre>
+
+            </code>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
